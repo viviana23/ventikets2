@@ -1,0 +1,574 @@
+$icon-font-path: '../fonts/';
+    // bower:scss
+    @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+    // endbower
+    @import "_variables.scss";
+    body {
+        font-family: 'Open Sans', sans-serif !important;
+        font-size: 14px !important;
+    }
+
+
+    /*MIXINS*/
+    @mixin tamaño_imagenes($ancho,$alto,$min-ancho,$min-alto,$max-ancho,$max-alto){
+        width: $ancho; 
+        height: $alto;
+        min-width: $min-ancho;
+        min-height: $min-alto;
+        max-width: $max-ancho;
+        max-height: $max-alto;
+       
+    }
+
+/*/ elementos Barra nav/*/
+    .barra-nav {
+        background-color: #222222;
+        max-width: 1000px;
+    }
+
+     .boton-ingresar {
+        color: $amarillo;
+        margin-top: 5px;
+        background: transparent;
+    }
+
+    .margen-superior {
+        margin-top: 10px;
+    }
+
+
+    /*cabecera incio:*/
+    .ancho-maximo {
+        max-width: 1000px;
+    }
+
+     .cabecera img {
+        width: 100%;
+        height: 100%;
+        max-height: 280px;
+        min-height: 280px;
+        max-width: 1000px;
+        background-size: cover;
+        margin-top: 30px;
+    }
+
+    header.container-fluid {
+        background-image: url(../images/Bitmap2.png);    
+        border-image: 0%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 309px;
+    }
+
+    @mixin icono-cabecera($displa,$paddin,$margi,$mar-left,$mar-top){
+
+        display: $displa;
+        padding:$paddin;
+        margin:$margi;
+        margin-left: $mar-left;
+        margin-top:$mar-top;
+
+    }
+
+    .iconos img {
+        @include icono-cabecera(inline-block, 0px 12px, 0px 8px,105px,-310px);
+       
+    }
+    
+
+
+    .icono-boton {
+        @include icono-cabecera(inline-block, 0px 12px, 0px 8px,-5px,-310px);
+        background: transparent;
+        color: white;
+    }
+
+    
+    /*cabecera fin: */
+
+    
+    /*footer*/
+
+    img.footer {
+        margin-top:30px;
+        min-width: 934px;
+        min-height: 257px;
+        max-height: 257px;
+        max-width: 934px;
+    }
+
+/*boton ver mas eventos*/
+    
+    .texto-ver {
+        color: $amarillo;
+    }
+
+    .ver-mas {
+       @extend .texto-ver;
+        background-color: #FFFFFF;
+    }
+
+
+    /*contenedor eventos desktop*/
+
+    .desenfoque {
+         margin-top: 30px;
+        overflow: hidden;
+        -moz-overflow: hidden;
+        display: inline-block;
+        -webkit-filter: blur(100px);
+        -moz-filter: blur(100px);
+        -o-filter: blur(100px);
+        -ms-filter: blur(100px);
+        filter: blur(100px);
+        z-index: -1;
+    }
+    
+    .desenfoque:before {
+        -webkit-filter: blur(2px);
+        -moz-filter: blur(2px); 
+        -o-filter: blur(2px); 
+        -ms-filter: blur(2px); 
+        filter: blur(2px);
+        z-index: -1;
+    }
+
+.opacidad,
+    .opacidad2
+    {
+        position: relative;
+    }
+    
+    .opacidad:after,
+    .opacidad2:after {
+        content: '\A';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 2;
+        background: rgba(0, 0, 0, 0.6);
+        opacity: 1;
+    }
+    
+    .opacidad2:after {
+        width: 300px;
+        height: 468px;
+        top: 30px;
+    }
+
+
+
+    
+
+    img.entrada {
+
+        @include tamaño_imagenes(100%,100%,300px,468px,300px,468px);
+       
+    }
+ 
+    img.evento {
+        position: relative;
+        margin-top: -675px;
+        margin-left: 8.5px;
+        @include tamaño_imagenes(100%,100%,283px,280px,283px,280px);
+        
+      
+    }
+    img.status {
+        margin-top: -915px;
+        position: relative;
+    }
+
+    .subir-entrada {
+        margin-top: -190px;
+         position: relative;
+         margin-left: 10px;
+
+    }
+    
+
+     h2 {
+        margin-top: -222px;
+        font-size: 24px;
+        font-weight: bold;
+        color: $amarillo;
+    }
+    
+    h1 {
+        margin-top: -200px;
+        font-size: 24px;
+        font-weight: bold;
+        color: $amarillo;
+    }
+
+
+    .icono-evento1 {
+        color: $amarillo;
+         margin-right: 10px;
+    }
+
+    .icono-evento2 {
+        @extend .icono-evento1;
+         margin-right: 15px;
+    }
+
+
+    .datos-evento {
+        color: white;
+        font-size: 16px;
+    }
+
+   
+     img.panel10 {
+        padding-left: 10px;
+    }
+     
+
+    .boton {
+        color: white;
+        background-color: $amarillo;
+        margin-left: 40px;
+    }
+/*contenedor de eventos movil*/
+     
+img.movil {
+        min-width: 120px;
+        min-height: 100px;
+        max-height: 100px;
+        max-width: 120px;
+        margin-top: 20px;
+    }
+.redes-movil {
+        margin-top: 15px;
+        margin-left: 5px;
+    }
+
+    h3 {
+        font-size: 12px;
+        font-weight: bold;
+    }
+     
+
+     .divider {
+        margin-top: 5px;
+        height: 1px;
+        margin-left: 20px;
+        display: block;
+        overflow: hidden;
+        background-color: #130505;
+    }
+
+    .boton-movil {
+        @extend .boton;
+        margin-top: 5px;
+        margin-left: 120px;
+    }
+
+.icono-eventomovil {
+        color: $amarillo;
+    }
+
+
+    /*contenedor que dicen nuestros clientes*/
+
+
+    .contenedor-clientes {
+        background-color: #EAE5E5;
+         margin-top: 30px;
+
+    }
+
+    .margenes {
+        margin-left: 120px;
+        margin-right: 100px;
+    }
+
+    #puntos,#correo,#clientes{
+ margin-top: 30px;
+
+    }
+
+     h6 {
+        font-size: 30px;
+        color: #8E8383;
+        text-align: center;
+        
+    }
+.color-icono {
+        color: $rojo-principal;
+    }
+
+
+    
+    .datos {
+       color: black;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+     img.foto {
+        min-width: 80px;
+        min-height: 80px;
+        max-height: 80px;
+        max-width: 80px;
+    }
+
+    /*pie de pagina*/
+
+    .font-negro {
+        background: $negro;
+
+    }
+
+     .pie{
+        color: white;
+        text-align:center;
+        margin-top:30px;
+    }
+
+    .redes-pie{
+margin-top:60px;
+
+    }
+
+    .alto-pie {
+        text-align: center;
+        height: 200px;
+    }
+
+     
+    .divider-white-vertical {
+        margin-top: -80px;
+        height: 80px;
+        border-right: 1px solid #f2f2f2;
+        margin-right: -15px;
+    }
+
+     .divisor {
+        margin-top: -60px;
+    }
+
+
+
+/*! imagen fecha-hora-lugar en evento.html*/
+   
+    img.detalle {
+        width: 100%;
+        height: 100%;
+        max-height: 370px;
+        max-width: 380px;
+    }
+
+    #descripcion-evento{
+margin-top:80px;
+
+    }
+
+    
+    img.fotos-lugar {
+        width: 335px;
+        height: 140px;
+         position: relative;
+   
+
+    }
+
+ /*detalle de evento*/   
+ .titulo {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .ocultar-div {
+        display: none;
+    }
+    
+
+ .alto-panel {
+        height: 595px;
+    }
+
+    .selecclugar {
+        margin-top: 30px;
+        background-color: black;
+        width: 320px;
+        padding-left: 10px;
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+
+    }
+
+    .margen-sup30{
+        margin-top: 30px;
+    }
+
+    .margen-sup5{
+        margin-top: 5px;
+    }
+.alinear-redes{
+        margin-top: 60px;
+        margin-left: 10px;
+    }
+     .sel-asiento {
+         margin-top: 30px;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .ingrese-datos{
+    margin-top: 30px;
+    margin-left: 30px;
+    font-size: 24px;
+    font-weight: bold;
+
+    }
+    /* estilo de campos de textos en evento.html*/ 
+    .inputt {
+        font: .9em/1.5em "handwriting";
+
+        border-color: #BAB4B4;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        padding: 0 10px;
+        margin: 0;
+        width: 240px;
+        background: none;
+    }
+    
+    .inputt:focus {
+        border-color: #FF3B00;
+        outline: none;
+    }
+.panel-datos {
+        margin-left: 100px;
+        margin-top: 30px;
+    }
+
+    .boton-registrar {
+
+        
+        margin-top: 30px;
+        color: white;
+        background-color: $amarillo;
+        margin-left: 40px;
+    }
+
+    .leer-datosperson {
+        border: none;
+         margin-top: 4px;
+    }
+.detalles{
+color: black;
+        font-size: 16px;
+
+    }
+    
+
+
+    /*media querys*/
+ @media all and (max-width: 1200px) {
+        .iconos img {
+            @include icono-cabecera(inline-block, 0px 6px, 0px 2px,80px,-310px);
+           
+        }
+        .icono-boton {
+          
+             @include icono-cabecera(inline-block,0px 6px, 0px 2px,5px,-310px);
+            background: transparent;
+            color: white;
+        }
+        
+        .centrar-evento {
+            margin-left: 10px;
+            margin-top:30px;
+        }
+
+        .panel-datos {
+            margin-left: 50px;
+            margin-top: 30px;
+        }
+    }
+
+
+    @media all and (max-width: 842px) {
+        .iconos img {
+            @include icono-cabecera(inline-block, 0px 3px, 0px 2px,65px,-310px);
+           
+        }
+        .icono-boton {
+         
+             @include icono-cabecera(inline-block, 0px 3px, 0px 2px,5px,-310px);
+            background: transparent;
+            color: white;
+        }
+
+        .subir-texto1 {
+            margin-top: -30px;
+        }
+
+        .subir-iconos img {
+            margin-top: -100px;
+        }
+
+         .subir-texto2 {
+            margin-top: -40px;
+        }
+        .panel-datos {
+            margin-left: 250px;
+            margin-top: 30px;
+        }
+        .alinear-redes{
+        margin-top: 60px;
+        margin-left: 250px;
+    }
+        //linea blanca horizontal en movil en pie de pagina//
+        .divider-white {
+        margin-top: -30px;
+        height: 2px;
+        max-width: 30%;
+        display: block;
+        overflow: hidden;
+        background-color: #FFFFFF;
+ }
+    }
+    
+    @media all and (max-width: 520px) {
+        .iconos img {
+            
+            @include icono-cabecera(block, 0px, 0px, 145px,-100px);
+            
+            float: none;
+            text-align: left;
+        
+        }
+        .icono-boton {
+         
+             @include icono-cabecera(inline-block, 0px 3px, 0px 2px,195px,-60px);
+            background: transparent;
+            color: white;
+        }
+
+        .panel-datos {
+            margin-left: 50px;
+            margin-top: 30px;
+        }
+
+        .alinear-redes{
+        margin-top: 60px;
+        margin-left: 150px;
+    }
+       
+        //linea blanca horizontal en movil en pie de pagina//
+         .divider-white {
+        margin-top: -30px;
+        height: 2px;
+        max-width: 45%;
+        display: block;
+        overflow: hidden;
+        background-color: #FFFFFF;
+ }
+
+    }

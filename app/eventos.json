@@ -1,0 +1,128 @@
+{
+    "eventos": [{
+            "id": 1,
+            "available": true,
+            "today": false,
+            "titulo": "TÍPIC Lorem ipsum dolor sit amet, consect.",
+            "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sollicitudin orci elit. Pellentesque sed malesuada quam. Nulla sed magna sed metus euismod tempus. Quisque et arcu at odio imperdiet laoreet. Proin posuere malesuada finibus. Phasellus egestas scelerisque tincidunt. Aliquam auctor condimentum rutrum.Proin posuere malesuada finibus. Phasellus egestas scelerisque tincidunt. Aliquam auctor condimentum rutrum.Proin posuere malesuada finibus. Phasellus egestas scelerisque tincidunt. Aliquam auctor condimentum rutrum..",
+            "nombre": "VIVE 88000000",
+            "fecha": "Jueves 22 de octubre",
+            "direccion": "Casino Militar - La Grita,Tachira",
+            "hora": "10:00 pm",
+            "featured": "images/Bitmap1.png",
+            "blured": "images/entrada1.jpeg"
+        }, {
+            "id": 2,
+            "available": false,
+            "today": true,
+            "titulo": "TÍPIC Lorem ipsum dolor sit amet, consect.",
+            "descripcion": " Nulla sed magna sed metus euismod tempus. Quisque et arcu at odio imperdiet laoreet. Proin posuere malesuada finibus. Phasellus egestas scelerisque tincidunt. Aliquam auctor condimentum rutrum.Proin posuere malesuada finibus. Phasellus egestas scelerisque tincidunt. Aliquam auctor condimentum rutrum.Proin posuere malesuada finibus. Phasellus egestas scelerisque tincidunt. Aliquam auctor condimentum rutrum..",
+            "nombre": "VIVE 77777",
+            "fecha": "Jueves 22 de octubre",
+            "direccion": "Casino Militar - La Grita,Tachira",
+            "hora": "10:00 pm",
+            "featured": "images/Bitmap1.png",
+            "blured": "images/entrada1.jpeg"
+        }, {
+            "id": 3,
+            "available": false,
+            "today": false,
+            "titulo": "TÍPIC Lorem ipsum dolor sit amet, consect.",
+          "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sollicitudin orci elit. Pellentesque sed malesuada quam. Nulla sed magna sed metus euismod tempus. Quisque et arcu at odio imperdiet laoreet. Proin posuere malesuada finibus. Phasellus egestas scelerisque tincidunt. Aliquam auctor condimentum rutrum.Proin posuere malesuada finibus. Phasellus egestas scelerisque tincidunt. Aliquam auctor condimentum rutrum.Proin posuere malesuada finibus. Phasellus egestas scelerisque tincidunt. Aliquam auctor condimentum rutrum..",
+            "nombre": "VIVE 40",
+            "fecha": "Jueves 30 de octubre",
+            "direccion": "pueblo nuevo - La Grita,Tachira",
+            "hora": "10:00 pm",
+            "featured": "images/Bitmap1.png",
+            "blured": "images/entrada1.jpeg"
+        },{
+            "id": 4,
+            "available": true,
+            "today": false,
+            "titulo": "TÍPIC Lorem ipsum dolor sit amet, consect.",
+            "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sollicitudin orci elit. Pellentesque sed malesuada quam. Nulla sed magna sed metus euismod tempus. Quisque et arcu at odio imperdiet laoreet. Proin posuere malesuada finibus. Phasellus egestas scelerisque tincidunt. Aliquam auctor condimentum rutrum.Proin posuere malesuada finibus. Phasellus egestas scelerisque tincidunt. Aliquam auctor condimentum rutrum.Proin posuere malesuada finibus. Phasellus egestas scelerisque tincidunt. Aliquam auctor condimentum rutrum..",
+            "nombre": "VIVE 88000000",
+            "fecha": "Jueves 22 de octubre",
+            "direccion": "Casino Militar - La Grita,Tachira",
+            "hora": "10:00 pm",
+            "featured": "images/Bitmap1.png",
+            "blured": "images/entrada1.jpeg"
+        }, {
+            "id": 5,
+            "available": false,
+            "today": true,
+            "titulo": "TÍPIC Lorem ipsum dolor sit amet, consect.",
+            "descripcion": " Nulla sed magna sed metus euismod tempus. Quisque et arcu at odio imperdiet laoreet. Proin posuere malesuada finibus. Phasellus egestas scelerisque tincidunt. Aliquam auctor condimentum rutrum.Proin posuere malesuada finibus. Phasellus egestas scelerisque tincidunt. Aliquam auctor condimentum rutrum.Proin posuere malesuada finibus. Phasellus egestas scelerisque tincidunt. Aliquam auctor condimentum rutrum..",
+            "nombre": "VIVE 77777",
+            "fecha": "Jueves 22 de octubre",
+            "direccion": "Casino Militar - La Grita,Tachira",
+            "hora": "10:00 pm",
+            "featured": "images/Bitmap1.png",
+            "blured": "images/entrada1.jpeg"
+        }, {
+            "id": 6,
+            "available": false,
+            "today": false,
+            "titulo": "TÍPIC Lorem ipsum dolor sit amet, consect.",
+          "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sollicitudin orci elit. Pellentesque sed malesuada quam. Nulla sed magna sed metus euismod tempus. Quisque et arcu at odio imperdiet laoreet. Proin posuere malesuada finibus. Phasellus egestas scelerisque tincidunt. Aliquam auctor condimentum rutrum.Proin posuere malesuada finibus. Phasellus egestas scelerisque tincidunt. Aliquam auctor condimentum rutrum.Proin posuere malesuada finibus. Phasellus egestas scelerisque tincidunt. Aliquam auctor condimentum rutrum..",
+            "nombre": "VIVE 40",
+            "fecha": "Jueves 30 de octubre",
+            "direccion": "pueblo nuevo - La Grita,Tachira",
+            "hora": "10:00 pm",
+            "featured": "images/Bitmap1.png",
+            "blured": "images/entrada1.jpeg"
+        }
+            ],
+
+    "puntos": [{
+        "id": 1,
+        "puntos": "Puntos de Venta",
+        "descripcion": "stretch out our arms farther... And then one fine morning— So we beat on, boats against the current, borne back ceaselessly into the past the current, borne back ceaselessly into the past."
+
+    }],
+
+
+    "numeros": [{
+        "id": 2,
+        "numeros": "Numeros de Contacto",
+        "numone": "(0416)5335323",
+        "numtwo": "(0416)5335323",
+        "numthree": "(0416)5335323"
+
+    }],
+
+    "correo": [{
+            "id": 3,
+            "correo": "Correo Electronico",
+            "direccion": "viviana.com"
+
+        }
+
+    ],
+
+     "cliente": [{
+            "id": 1,
+            "foto": "/images/1.jpeg",
+            "nombre": "Ana Medina",
+            "opinion":" stretch out our arms farther... And then one fine morning— So we beat on, boats against the current, borne back ceaselessly into the past the current, borne back ceaselessly into the past."
+
+        },{
+            "id": 2,
+            "foto": "/images/2.jpeg",
+            "nombre": "Ana Medina",
+            "opinion":" stretch out our arms farther... And then one fine morning— So we beat on, boats against the current, borne back ceaselessly into the past the current, borne back ceaselessly into the past."
+
+},
+{
+            "id": 3,
+            "foto": "/images/3.jpeg",
+            "nombre": "Ana Medina",
+            "opinion":" stretch out our arms farther... And then one fine morning— So we beat on, boats against the current, borne back ceaselessly into the past the current, borne back ceaselessly into the past."
+
+}
+    ]
+
+
+
+
+}
