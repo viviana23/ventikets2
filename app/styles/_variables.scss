@@ -10,4 +10,59 @@ $gris-tabla:#EFEFEF;
 /*pie de pagina*/
 $negro:black;
 
+/*barra de navegacion */
+$barra-nav:#222222;
+/*tipo letra de todoslos textos*/
+$font-size: 24px;
+$font-weight: bold;
 
+
+/*MIXINS*/
+
+
+    @mixin icono-cabecera($displa,$paddin,$margi,$mar-left,$mar-top){
+
+        display: $displa;
+        padding:$paddin;
+        margin:$margi;
+        margin-left: $mar-left;
+        margin-top:$mar-top;
+
+    }
+/*definir tamaño especifico de cada imagen*/
+   @mixin tamano_imagenes($ancho,$alto,$min-ancho,$min-alto,$max-ancho,$max-alto){
+        width: $ancho; 
+        height: $alto;
+        min-width: $min-ancho;
+        min-height: $min-alto;
+        max-width: $max-ancho;
+        max-height: $max-alto;
+       
+    }
+/*divisor horizontal debajo de iconos de redes sociales en pie de pagina*/
+    @mixin divisor_horizontal($mar-sup,$alto,$max-ancho,$disp,$over,$fondo){
+        margin-top: $mar-sup;
+        height:$alto;
+        max-width: $max-ancho;
+        display: $disp;
+        overflow: $over;
+        background-color: $fondo;
+   }
+
+ /*propiedad blur de imagenes*/  
+    @mixin desenfocar($des){
+        -webkit-filter: blur($des);
+        -moz-filter: blur($des);
+        -o-filter: blur($des);
+        -ms-filter: blur($des);
+        filter: blur($des);
+        
+
+
+    }
+
+    @mixin margen-tope-leftt($tope,$leftt){
+       margin-top: $tope;
+        margin-left: $leftt;
+
+    }

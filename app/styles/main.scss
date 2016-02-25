@@ -3,133 +3,117 @@ $icon-font-path: '../fonts/';
     @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
     // endbower
     @import "_variables.scss";
+
+
     body {
         font-family: 'Open Sans', sans-serif !important;
         font-size: 14px !important;
     }
 
-
-    /*MIXINS*/
-    @mixin tamaño_imagenes($ancho,$alto,$min-ancho,$min-alto,$max-ancho,$max-alto){
-        width: $ancho; 
-        height: $alto;
-        min-width: $min-ancho;
-        min-height: $min-alto;
-        max-width: $max-ancho;
-        max-height: $max-alto;
-       
-    }
-
 /*/ elementos Barra nav/*/
-    .barra-nav {
-        background-color: #222222;
-        max-width: 1000px;
-    }
 
-     .boton-ingresar {
+nav{
+
+.barra-nav {
+        background-color: $barra-nav;
+        max-width: 1000px;
+
+ .margen-superior {
+        margin-top: 10px;
+    }
+    
+.boton-ingresar {
         color: $amarillo;
         margin-top: 5px;
         background: transparent;
     }
 
-    .margen-superior {
-        margin-top: 10px;
     }
 
+}
 
-    /*cabecera incio:*/
-    .ancho-maximo {
-        max-width: 1000px;
-    }
+/*cabecera incio:*/
 
-     .cabecera img {
-        width: 100%;
-        height: 100%;
-        max-height: 280px;
-        min-height: 280px;
-        max-width: 1000px;
-        background-size: cover;
-        margin-top: 30px;
-    }
-
-    header.container-fluid {
+    header{
         background-image: url(../images/Bitmap2.png);    
         border-image: 0%;
         background-repeat: no-repeat;
         background-size: cover;
         height: 309px;
+
+        .container {
+        max-width: 1000px;
+
+          .cabecera img {
+            @include tamano_imagenes(100%,100%,0px,280px,1000px,280px);
+            background-size: cover;
+            margin-top: 30px;
+         }
+
+    }
     }
 
-    @mixin icono-cabecera($displa,$paddin,$margi,$mar-left,$mar-top){
-
-        display: $displa;
-        padding:$paddin;
-        margin:$margi;
-        margin-left: $mar-left;
-        margin-top:$mar-top;
-
-    }
-
-    .iconos img {
+     .iconos  {
+        img{
         @include icono-cabecera(inline-block, 0px 12px, 0px 8px,105px,-310px);
-       
-    }
-    
-
-
-    .icono-boton {
+      }
+      button{
         @include icono-cabecera(inline-block, 0px 12px, 0px 8px,-5px,-310px);
         background: transparent;
         color: white;
     }
+    } 
+/*cabecera fin: */
 
-    
-    /*cabecera fin: */
 
-    
-    /*footer*/
-
-    img.footer {
+/*footer*/
+    footer {
+ 
+        .foo{
         margin-top:30px;
-        min-width: 934px;
-        min-height: 257px;
-        max-height: 257px;
-        max-width: 934px;
+        @include tamano_imagenes(100%,100%,1000px,257px,1000px,257px);
+        }
     }
 
 /*boton ver mas eventos*/
-    
-    .texto-ver {
-        color: $amarillo;
-    }
 
-    .ver-mas {
-       @extend .texto-ver;
+.ver-mas{
+text-align: center;
+div{
+    text-align: center;
+
+    button{
+         color: $amarillo;
         background-color: #FFFFFF;
+
     }
 
+    span{
+         color: $amarillo;
+    }
 
-    /*contenedor eventos desktop*/
+}
+
+}
+
+/*contenedor eventos desktop*/
+
+    .ancho-maximo {
+        max-width: 1000px;
+
+    }
 
     .desenfoque {
          margin-top: 30px;
         overflow: hidden;
         -moz-overflow: hidden;
         display: inline-block;
-        -webkit-filter: blur(100px);
-        -moz-filter: blur(100px);
-        -o-filter: blur(100px);
-        -ms-filter: blur(100px);
-        filter: blur(100px);
+        @include desenfocar(100px);
         z-index: -1;
     }
     
     .desenfoque:before {
-        -webkit-filter: blur(2px);
-        -moz-filter: blur(2px); 
-        -o-filter: blur(2px); 
-        -ms-filter: blur(2px); 
-        filter: blur(2px);
+         @include desenfocar(2px);
         z-index: -1;
     }
 
@@ -156,22 +140,17 @@ $icon-font-path: '../fonts/';
         height: 468px;
         top: 30px;
     }
-
-
-
-    
-
     img.entrada {
 
-        @include tamaño_imagenes(100%,100%,300px,468px,300px,468px);
+        @include tamano_imagenes(100%,100%,300px,468px,300px,468px);
        
     }
  
     img.evento {
         position: relative;
-        margin-top: -675px;
-        margin-left: 8.5px;
-        @include tamaño_imagenes(100%,100%,283px,280px,283px,280px);
+        @include margen-tope-leftt(675px,8.5px)
+        
+        @include tamano_imagenes(100%,100%,283px,280px,283px,280px);
         
       
     }
@@ -181,27 +160,23 @@ $icon-font-path: '../fonts/';
     }
 
     .subir-entrada {
-        margin-top: -190px;
+        @include margen-tope-leftt(-190px,10px)
          position: relative;
-         margin-left: 10px;
+        
+}
 
+      h1,h2 {
+       margin-top: -200px;
+        font-size: 24px;
+        font-weight: bold;
+        color: $amarillo;
     }
     
-
-     h2 {
+ h2 {
         margin-top: -222px;
-        font-size: 24px;
-        font-weight: bold;
-        color: $amarillo;
+       
     }
-    
-    h1 {
-        margin-top: -200px;
-        font-size: 24px;
-        font-weight: bold;
-        color: $amarillo;
-    }
-
+ 
 
     .icono-evento1 {
         color: $amarillo;
@@ -230,77 +205,84 @@ $icon-font-path: '../fonts/';
         background-color: $amarillo;
         margin-left: 40px;
     }
+
 /*contenedor de eventos movil*/
      
-img.movil {
-        min-width: 120px;
-        min-height: 100px;
-        max-height: 100px;
-        max-width: 120px;
+.content-movil{
+img{
+     @include tamano_imagenes(0px,0px,120px,100px,120px,100px);
         margin-top: 20px;
-    }
+
+}
+
+}
 .redes-movil {
-        margin-top: 15px;
-        margin-left: 5px;
+text-align: center;
+    img {
+@include margen-tope-leftt(15px,5px)
+       
+    }
     }
 
-    h3 {
-        font-size: 12px;
+.icono-eventomovil {
+
+ h3 {
+        font-size: 14px;
         font-weight: bold;
     }
-     
+    
+    p{
+         i{
+           color: $amarillo;
 
-     .divider {
+          }
+     }
+
+           button {
+             @extend .boton;
+             @include margen-tope-leftt(5px,120px)
+            
+           }
+}
+
+    .divider {
         margin-top: 5px;
         height: 1px;
         margin-left: 20px;
         display: block;
         overflow: hidden;
         background-color: #130505;
-    }
-
-    .boton-movil {
-        @extend .boton;
-        margin-top: 5px;
-        margin-left: 120px;
-    }
-
-.icono-eventomovil {
-        color: $amarillo;
-    }
+    } 
 
 
-    /*contenedor que dicen nuestros clientes*/
+/*contenedor que dicen nuestros clientes*/
 
 
     .contenedor-clientes {
         background-color: #EAE5E5;
          margin-top: 30px;
 
-    }
-
-    .margenes {
+        .margenes {
         margin-left: 120px;
         margin-right: 100px;
+    
+       #puntos,#correo,#clientes{
+        margin-top: 30px;
+
     }
-
-    #puntos,#correo,#clientes{
- margin-top: 30px;
-
-    }
-
-     h6 {
+       h6 {
         font-size: 30px;
         color: #8E8383;
         text-align: center;
         
     }
+    }
+     }
+
 .color-icono {
         color: $rojo-principal;
     }
-
-
-    
+ 
     .datos {
        color: black;
         font-size: 16px;
@@ -308,33 +290,33 @@ img.movil {
     }
 
      img.foto {
-        min-width: 80px;
-        min-height: 80px;
-        max-height: 80px;
-        max-width: 80px;
+         @include tamano_imagenes(0px,0px,80px,80px,80px,80px);
+        
     }
 
-    /*pie de pagina*/
+/*pie de pagina*/
 
     .font-negro {
         background: $negro;
 
-    }
 
-     .pie{
+        .alto-pie {
+        text-align: center;
+        height: 200px;
+       
+        .pie{
         color: white;
         text-align:center;
         margin-top:30px;
     }
-
-    .redes-pie{
+   
+ .redes-pie{
 margin-top:60px;
 
     }
 
-    .alto-pie {
-        text-align: center;
-        height: 200px;
+
+    }
     }
 
      
@@ -349,15 +331,11 @@ margin-top:60px;
         margin-top: -60px;
     }
 
-
-
 /*! imagen fecha-hora-lugar en evento.html*/
    
     img.detalle {
-        width: 100%;
-        height: 100%;
-        max-height: 370px;
-        max-width: 380px;
+         @include tamano_imagenes(100%,100%,0px,0px,380px,370px);
+       
     }
 
     #descripcion-evento{
@@ -365,16 +343,24 @@ margin-top:80px;
 
     }
 
-    
-    img.fotos-lugar {
+        img.fotos-lugar {
         width: 335px;
         height: 140px;
          position: relative;
-   
-
-    }
+      }
 
  /*detalle de evento*/   
+
+ table{
+
+    .col-tabla{
+background-color: $gris-tabla;
+       
+    }
+ }
+
+
+
  .titulo {
         font-size: 24px;
         font-weight: bold;
@@ -407,9 +393,18 @@ margin-top:80px;
     .margen-sup5{
         margin-top: 5px;
     }
+
 .alinear-redes{
-        margin-top: 60px;
-        margin-left: 10px;
+    @include margen-tope-leftt(60px,10px)
+        
+
+     p{
+        color: black;
+        font-size: 16px;
+
+    }
+
+
     }
      .sel-asiento {
          margin-top: 30px;
@@ -418,13 +413,12 @@ margin-top:80px;
     }
 
     .ingrese-datos{
-    margin-top: 30px;
-    margin-left: 30px;
-    font-size: 24px;
+        @include margen-tope-leftt(30px,30px)
+       font-size: 24px;
     font-weight: bold;
 
     }
-    /* estilo de campos de textos en evento.html*/ 
+/* estilo de campos de textos en evento.html*/ 
     .inputt {
         font: .9em/1.5em "handwriting";
 
@@ -443,67 +437,68 @@ margin-top:80px;
         outline: none;
     }
 .panel-datos {
-        margin-left: 100px;
-        margin-top: 30px;
+    @include margen-tope-leftt(30px,100px)
+        
     }
 
-    .boton-registrar {
-
-        
-        margin-top: 30px;
+    .boton-registrar { 
+        @include margen-tope-leftt(30px,40px)
+       
         color: white;
         background-color: $amarillo;
-        margin-left: 40px;
+       
     }
 
     .leer-datosperson {
+        input{
         border: none;
          margin-top: 4px;
+     }
     }
-.detalles{
-color: black;
-        font-size: 16px;
-
-    }
-    
 
 
-    /*media querys*/
+/*media querys*/
  @media all and (max-width: 1200px) {
-        .iconos img {
+
+        .iconos  {
+            img{
             @include icono-cabecera(inline-block, 0px 6px, 0px 2px,80px,-310px);
-           
-        }
-        .icono-boton {
+           }
+           button {
           
              @include icono-cabecera(inline-block,0px 6px, 0px 2px,5px,-310px);
             background: transparent;
             color: white;
         }
+        }
+        
         
         .centrar-evento {
-            margin-left: 10px;
-            margin-top:30px;
+            @include margen-tope-leftt(30px,10px)
+           
         }
 
         .panel-datos {
-            margin-left: 50px;
-            margin-top: 30px;
+            @include margen-tope-leftt(30px,50px)
+           
         }
     }
 
 
     @media all and (max-width: 842px) {
-        .iconos img {
+        .iconos  {
+
+            img{
             @include icono-cabecera(inline-block, 0px 3px, 0px 2px,65px,-310px);
-           
-        }
-        .icono-boton {
+           }
+          button{
          
              @include icono-cabecera(inline-block, 0px 3px, 0px 2px,5px,-310px);
             background: transparent;
             color: white;
         }
+        }
+        
 
         .subir-texto1 {
             margin-top: -30px;
@@ -517,58 +512,52 @@ color: black;
             margin-top: -40px;
         }
         .panel-datos {
-            margin-left: 250px;
-            margin-top: 30px;
+            @include margen-tope-leftt(30px,250px)
+            
         }
         .alinear-redes{
-        margin-top: 60px;
-        margin-left: 250px;
-    }
-        //linea blanca horizontal en movil en pie de pagina//
+            @include margen-tope-leftt(60px,250px)
+       
+        /*linea blanca horizontal en movil en pie de pagina*/
         .divider-white {
-        margin-top: -30px;
-        height: 2px;
-        max-width: 30%;
-        display: block;
-        overflow: hidden;
-        background-color: #FFFFFF;
+            @include divisor_horizontal(-30px,2px,30%,block,hidden, #FFFFFF);
+        
  }
     }
     
     @media all and (max-width: 520px) {
-        .iconos img {
-            
+        .iconos  {
+            img{
             @include icono-cabecera(block, 0px, 0px, 145px,-100px);
             
             float: none;
             text-align: left;
-        
-        }
-        .icono-boton {
+            }
+             button {
          
              @include icono-cabecera(inline-block, 0px 3px, 0px 2px,195px,-60px);
             background: transparent;
             color: white;
         }
+        
+        }
+       
 
         .panel-datos {
-            margin-left: 50px;
-            margin-top: 30px;
+            @include margen-tope-leftt(50px,30px)
+            
         }
 
         .alinear-redes{
-        margin-top: 60px;
-        margin-left: 150px;
+            @include margen-tope-leftt(60px,150px)
+        
     }
        
-        //linea blanca horizontal en movil en pie de pagina//
+        /*linea blanca horizontal en movil en pie de pagina*/
          .divider-white {
-        margin-top: -30px;
-        height: 2px;
-        max-width: 45%;
-        display: block;
-        overflow: hidden;
-        background-color: #FFFFFF;
+             @include divisor_horizontal(-30px,2px,45%,block,hidden, #FFFFFF);
+       
  }
 
     }
+
