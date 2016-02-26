@@ -17,547 +17,465 @@ nav{
 .barra-nav {
         background-color: $barra-nav;
         max-width: 1000px;
-
- .margen-superior {
-        margin-top: 10px;
+        .margen-superior {
+                margin-top: 10px;
+        }
+        .boton-ingresar {
+                color: $amarillo;
+                margin-top: 5px;
+                background: transparent;
+        }
     }
-    
-.boton-ingresar {
-        color: $amarillo;
-        margin-top: 5px;
-        background: transparent;
-    }
-
-    }
-
 }
 
 /*cabecera incio:*/
 
-    header{
-        background-image: url(../images/Bitmap2.png);    
-        border-image: 0%;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 309px;
-
-        .container {
-        max-width: 1000px;
-
-          .cabecera img {
+header{
+    background-image: url(../images/Bitmap2.png);    
+    border-image: 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 309px;
+    
+    .container {
+    max-width: 1000px;
+    
+        .cabecera img {
             @include tamano_imagenes(100%,100%,0px,280px,1000px,280px);
             background-size: cover;
             margin-top: 30px;
-         }
-
+        }
     }
-    }
+}
 
-     .iconos  {
-        img{
+.iconos  {
+    img{
         @include icono-cabecera(inline-block, 0px 12px, 0px 8px,105px,-310px);
-      }
-      button{
+    }
+    button{
         @include icono-cabecera(inline-block, 0px 12px, 0px 8px,-5px,-310px);
         background: transparent;
         color: white;
     }
-    } 
+} 
 /*cabecera fin: */
 
 
 /*footer*/
-    footer {
- 
-        .foo{
+footer {
+    .foo{
         margin-top:30px;
         @include tamano_imagenes(100%,100%,1000px,257px,1000px,257px);
-        }
     }
+}
 
 /*boton ver mas eventos*/
 
 .ver-mas{
-text-align: center;
-div{
     text-align: center;
-
-    button{
-         color: $amarillo;
-        background-color: #FFFFFF;
-
+    div{
+        text-align: center;
+        button{
+            color: $amarillo;
+            background-color: #FFFFFF;
+        }
+        span{ color: $amarillo; }
     }
-
-    span{
-         color: $amarillo;
-    }
-
-}
-
 }
 
 /*contenedor eventos desktop*/
 
-    .ancho-maximo {
-        max-width: 1000px;
-
-    }
-
-    .desenfoque {
-         margin-top: 30px;
-        overflow: hidden;
-        -moz-overflow: hidden;
-        display: inline-block;
-        @include desenfocar(100px);
-        z-index: -1;
-    }
-    
-    .desenfoque:before {
-         @include desenfocar(2px);
-        z-index: -1;
-    }
-
-.opacidad,
-    .opacidad2
-    {
-        position: relative;
-    }
-    
-    .opacidad:after,
-    .opacidad2:after {
-        content: '\A';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 2;
-        background: rgba(0, 0, 0, 0.6);
-        opacity: 1;
-    }
-    
-    .opacidad2:after {
-        width: 300px;
-        height: 468px;
-        top: 30px;
-    }
-    img.entrada {
-
-        @include tamano_imagenes(100%,100%,300px,468px,300px,468px);
-       
-    }
- 
-    img.evento {
-        position: relative;
-        @include margen-tope-leftt(675px,8.5px)
-        
-        @include tamano_imagenes(100%,100%,283px,280px,283px,280px);
-        
-      
-    }
-    img.status {
-        margin-top: -915px;
-        position: relative;
-    }
-
-    .subir-entrada {
-        @include margen-tope-leftt(-190px,10px)
-         position: relative;
-        
+.ancho-maximo {
+    max-width: 1000px;
 }
 
-      h1,h2 {
-       margin-top: -200px;
-        font-size: 24px;
-        font-weight: bold;
-        color: $amarillo;
-    }
+.desenfoque {
+    margin-top: 30px;
+    overflow: hidden;
+    -moz-overflow: hidden;
+    display: inline-block;
+    @include desenfocar(100px);
+    z-index: -1;
+}
     
- h2 {
-        margin-top: -222px;
-       
-    }
+.desenfoque:before {
+    @include desenfocar(2px);
+    z-index: -1;
+}
+
+.opacidad,
+.opacidad2
+{
+    position: relative;
+}
+    
+.opacidad:after,
+.opacidad2:after {
+    content: '\A';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 2;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 1;
+}
+    
+.opacidad2:after {
+    width: 300px;
+    height: 468px;
+    top: 30px;
+}
+img.entrada {
+    @include tamano_imagenes(100%,100%,300px,468px,300px,468px);
+}
+img.evento {
+    position: relative;
+    @include margen-tope-leftt(-675px,8.5px);
+    @include tamano_imagenes(100%,100%,283px,280px,283px,280px);
+}
+img.status {
+    margin-top: -915px;
+    position: relative;
+}
+
+.subir-entrada {
+    @include margen-tope-leftt(-190px,10px);
+    position: relative;    
+}
+
+h1,h2 {
+    margin-top: -200px;
+    font-size: 24px;
+    font-weight: bold;
+    color: $amarillo;
+}
+    
+h2 {
+    margin-top: -222px;  
+}
  
+.icono-evento1 {
+    color: $amarillo;
+        margin-right: 10px;
+}
 
-    .icono-evento1 {
-        color: $amarillo;
-         margin-right: 10px;
-    }
+.icono-evento2 {
+    @extend .icono-evento1;
+    margin-right: 15px;
+}
 
-    .icono-evento2 {
-        @extend .icono-evento1;
-         margin-right: 15px;
-    }
+.datos-evento {
+    color: white;
+    font-size: 16px;
+}
 
-
-    .datos-evento {
-        color: white;
-        font-size: 16px;
-    }
-
-   
-     img.panel10 {
-        padding-left: 10px;
-    }
-     
-
-    .boton {
-        color: white;
-        background-color: $amarillo;
-        margin-left: 40px;
-    }
+img.panel10 {
+    padding-left: 10px;
+}
+    
+.boton {
+    color: white;
+    background-color: $amarillo;
+    margin-left: 40px;
+}
 
 /*contenedor de eventos movil*/
      
 .content-movil{
-img{
-     @include tamano_imagenes(0px,0px,120px,100px,120px,100px);
+    img{
+        @include tamano_imagenes(0px,0px,120px,100px,120px,100px);
         margin-top: 20px;
 
-}
-
+    }
 }
 .redes-movil {
-text-align: center;
+    text-align: center;
     img {
-@include margen-tope-leftt(15px,5px)
-       
+        @include margen-tope-leftt(15px,5px) 
     }
-    }
-
-.icono-eventomovil {
-
- h3 {
-        font-size: 14px;
-        font-weight: bold;
-    }
-    
-    p{
-         i{
-           color: $amarillo;
-
-          }
-     }
-
-           button {
-             @extend .boton;
-             @include margen-tope-leftt(5px,120px)
-            
-           }
 }
 
-    .divider {
-        margin-top: 5px;
-        height: 1px;
-        margin-left: 20px;
-        display: block;
-        overflow: hidden;
-        background-color: #130505;
-    } 
+.icono-eventomovil {
+    h3 {
+        font-size: 14px;
+        font-weight: bold;
+        }
+    p{
+         i{ color: $amarillo;}
+     }
+    button {
+        @extend .boton;
+        @include margen-tope-leftt(5px,120px);
+    }
+}
+
+.divider {
+    margin-top: 5px;
+    height: 1px;
+    margin-left: 20px;
+    display: block;
+    overflow: hidden;
+    background-color: #130505;
+} 
 
 
 /*contenedor que dicen nuestros clientes*/
-
-
-    .contenedor-clientes {
-        background-color: #EAE5E5;
-         margin-top: 30px;
-
-        .margenes {
-        margin-left: 120px;
-        margin-right: 100px;
-    
-       #puntos,#correo,#clientes{
-        margin-top: 30px;
-
-    }
-       h6 {
-        font-size: 30px;
-        color: #8E8383;
-        text-align: center;
-        
-    }
-    }
-     }
-
+.contenedor-clientes { 
+    background-color: #EAE5E5;
+   
+   .container-fluid {
+      max-width: 1000px;
+      background-color: #EAE5E5;
+      margin-top: 30px;
+       
+            #puntos,#correo,#clientes{
+                margin-top: 30px;
+            }
+            h6 {
+                font-size: 30px;
+                color: #8E8383;
+                text-align: center;
+            }     
+   }
+}
 .color-icono {
-        color: $rojo-principal;
-    }
- 
-    .datos {
-       color: black;
-        font-size: 16px;
-        font-weight: bold;
-    }
+    color: $rojo-principal;
+}
 
-     img.foto {
-         @include tamano_imagenes(0px,0px,80px,80px,80px,80px);
-        
-    }
+.datos {
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+img.foto {
+        @include tamano_imagenes(0px,0px,80px,80px,80px,80px);   
+}
 
 /*pie de pagina*/
-
-    .font-negro {
-        background: $negro;
-
-
-        .alto-pie {
-        text-align: center;
-        height: 200px;
-       
-        .pie{
-        color: white;
-        text-align:center;
-        margin-top:30px;
-    }
-   
- .redes-pie{
-margin-top:60px;
-
-    }
-
-
-    }
-    }
-
+.contenedor-piepagina{
+     background: $negro;
      
-    .divider-white-vertical {
-        margin-top: -80px;
-        height: 80px;
-        border-right: 1px solid #f2f2f2;
-        margin-right: -15px;
+   
+    .container-fluid {
+      max-width: 1000px;
+       
+        .alto-pie {
+            text-align: center;
+            height: 200px;
+             
+              .pie{
+               color: white;
+               text-align:center;
+                margin-top:30px;
+              }
+                .redes-pie{ 
+                   margin-top:60px; 
+                }
+       }
     }
+}  
+.divider-white-vertical {
+    margin-top: -80px;
+    height: 80px;
+    border-right: 1px solid #f2f2f2;
+    margin-right: -15px;
+}
 
-     .divisor {
-        margin-top: -60px;
-    }
+.divisor {
+    margin-top: -60px;
+}
 
 /*! imagen fecha-hora-lugar en evento.html*/
    
-    img.detalle {
-         @include tamano_imagenes(100%,100%,0px,0px,380px,370px);
-       
-    }
+img.detalle {
+    @include tamano_imagenes(100%,100%,0px,0px,380px,370px);
+}
 
-    #descripcion-evento{
-margin-top:80px;
+#descripcion-evento{
+    margin-top:80px;
+}
 
-    }
-
-        img.fotos-lugar {
-        width: 335px;
-        height: 140px;
-         position: relative;
-      }
+img.fotos-lugar {
+    width: 335px;
+    height: 140px;
+    position: relative;
+}
 
  /*detalle de evento*/   
 
  table{
-
-    .col-tabla{
-background-color: $gris-tabla;
-       
-    }
+    .col-tabla{ background-color: $gris-tabla;}
  }
 
+.titulo {
+    font-size: 24px;
+    font-weight: bold;
+}
 
-
- .titulo {
-        font-size: 24px;
-        font-weight: bold;
-    }
-
-    .ocultar-div {
-        display: none;
-    }
+.ocultar-div {
+    display: none;
+}
     
+.alto-panel {
+    height: 595px;
+}
 
- .alto-panel {
-        height: 595px;
-    }
+.selecclugar {
+    margin-top: 30px;
+    background-color: black;
+    width: 320px;
+    padding-left: 10px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
 
-    .selecclugar {
-        margin-top: 30px;
-        background-color: black;
-        width: 320px;
-        padding-left: 10px;
-        color: white;
-        font-size: 24px;
-        font-weight: bold;
+.margen-sup30{
+    margin-top: 30px;
+}
 
-    }
-
-    .margen-sup30{
-        margin-top: 30px;
-    }
-
-    .margen-sup5{
-        margin-top: 5px;
-    }
+.margen-sup5{
+    margin-top: 5px;
+}
 
 .alinear-redes{
-    @include margen-tope-leftt(60px,10px)
-        
-
-     p{
+    @include margen-tope-leftt(60px,10px);
+    p{
         color: black;
         font-size: 16px;
-
     }
+}
 
+.sel-asiento {
+margin-top: 30px;
+font-size: 24px;
+font-weight: bold;
+}
 
-    }
-     .sel-asiento {
-         margin-top: 30px;
-        font-size: 24px;
-        font-weight: bold;
-    }
-
-    .ingrese-datos{
-        @include margen-tope-leftt(30px,30px)
-       font-size: 24px;
+.ingrese-datos{
+    @include margen-tope-leftt(30px,30px);
+    font-size: 24px;
     font-weight: bold;
-
-    }
+}
 /* estilo de campos de textos en evento.html*/ 
-    .inputt {
-        font: .9em/1.5em "handwriting";
+.inputt {
+    font: .9em/1.5em "handwriting";
+    border-color: #BAB4B4;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    padding: 0 10px;
+    margin: 0;
+    width: 240px;
+    background: none;
+}
 
-        border-color: #BAB4B4;
-        border-left: none;
-        border-right: none;
-        border-top: none;
-        padding: 0 10px;
-        margin: 0;
-        width: 240px;
-        background: none;
-    }
-    
-    .inputt:focus {
-        border-color: #FF3B00;
-        outline: none;
-    }
+.inputt:focus {
+    border-color: #FF3B00;
+    outline: none;
+}
+
 .panel-datos {
-    @include margen-tope-leftt(30px,100px)
-        
-    }
+    @include margen-tope-leftt(30px,100px);  
+}
 
-    .boton-registrar { 
-        @include margen-tope-leftt(30px,40px)
-       
-        color: white;
-        background-color: $amarillo;
-       
-    }
+.boton-registrar { 
+    @include margen-tope-leftt(30px,40px);
+    color: white;
+    background-color: $amarillo; 
+}
 
-    .leer-datosperson {
-        input{
-        border: none;
-         margin-top: 4px;
-     }
+.leer-datosperson {
+    input{
+    border: none;
+    margin-top: 4px;
     }
+}
 
 
 /*media querys*/
  @media all and (max-width: 1200px) {
-
-        .iconos  {
-            img{
+    .iconos  {
+        img{
             @include icono-cabecera(inline-block, 0px 6px, 0px 2px,80px,-310px);
-           }
-           button {
-          
-             @include icono-cabecera(inline-block,0px 6px, 0px 2px,5px,-310px);
+        }
+        button {
+            @include icono-cabecera(inline-block,0px 6px, 0px 2px,5px,-310px);
             background: transparent;
             color: white;
         }
-        }
-        
-        
-        .centrar-evento {
-            @include margen-tope-leftt(30px,10px)
-           
-        }
-
-        .panel-datos {
-            @include margen-tope-leftt(30px,50px)
-           
-        }
+    }             
+    .centrar-evento {
+        @include margen-tope-leftt(30px,10px)
     }
 
+    .panel-datos {
+        @include margen-tope-leftt(30px,50px) 
+    }
+}
 
-    @media all and (max-width: 842px) {
-        .iconos  {
 
-            img{
-            @include icono-cabecera(inline-block, 0px 3px, 0px 2px,65px,-310px);
-           }
-          button{
-         
-             @include icono-cabecera(inline-block, 0px 3px, 0px 2px,5px,-310px);
-            background: transparent;
-            color: white;
+@media all and (max-width: 842px) {
+    .iconos  {
+        img{ @include icono-cabecera(inline-block, 0px 3px, 0px 2px,65px,-310px); }
+        button{
+        @include icono-cabecera(inline-block, 0px 3px, 0px 2px,5px,-310px);
+        background: transparent;
+        color: white;
         }
-        }
+    }
         
+    .subir-texto1 {
+        margin-top: -30px;
+    }
 
-        .subir-texto1 {
-            margin-top: -30px;
-        }
+    .subir-iconos img {
+        margin-top: -100px;
+    }
 
-        .subir-iconos img {
-            margin-top: -100px;
-        }
-
-         .subir-texto2 {
-            margin-top: -40px;
-        }
-        .panel-datos {
-            @include margen-tope-leftt(30px,250px)
-            
-        }
-        .alinear-redes{
-            @include margen-tope-leftt(60px,250px)
-       
-        /*linea blanca horizontal en movil en pie de pagina*/
-        .divider-white {
-            @include divisor_horizontal(-30px,2px,30%,block,hidden, #FFFFFF);
-        
- }
+    .subir-texto2 {
+        margin-top: -40px;
+    }
+    .panel-datos {
+        @include margen-tope-leftt(30px,250px); 
     }
     
-    @media all and (max-width: 520px) {
-        .iconos  {
-            img{
+    .alinear-redes{
+        @include margen-tope-leftt(60px,250px);
+    }
+    /*linea blanca horizontal en movil en pie de pagina*/
+    .divider-white {
+        @include divisor_horizontal(-30px,2px,30%,block,hidden, #FFFFFF);     
+    }
+}
+
+    
+@media all and (max-width: 520px) {
+    .iconos  {
+        img{
             @include icono-cabecera(block, 0px, 0px, 145px,-100px);
-            
             float: none;
             text-align: left;
-            }
-             button {
-         
-             @include icono-cabecera(inline-block, 0px 3px, 0px 2px,195px,-60px);
+        }
+        button {
+            @include icono-cabecera(inline-block, 0px 3px, 0px 2px,195px,-60px);
             background: transparent;
             color: white;
         }
-        
-        }
-       
-
-        .panel-datos {
-            @include margen-tope-leftt(50px,30px)
-            
-        }
-
-        .alinear-redes{
-            @include margen-tope-leftt(60px,150px)
-        
-    }
-       
-        /*linea blanca horizontal en movil en pie de pagina*/
-         .divider-white {
-             @include divisor_horizontal(-30px,2px,45%,block,hidden, #FFFFFF);
-       
- }
-
     }
 
+    .panel-datos {
+        @include margen-tope-leftt(50px,30px);
+    }
+
+    .alinear-redes{
+        @include margen-tope-leftt(60px,150px);
+    }
+       
+     /*linea blanca horizontal en movil en pie de pagina*/
+    .divider-white {
+        @include divisor_horizontal(-30px,2px,45%,block,hidden, #FFFFFF);
+    }
+}
